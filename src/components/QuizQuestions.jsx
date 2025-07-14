@@ -8,7 +8,7 @@ const QuizQuestions = ({ score, setScore, setIsQuizCompleted, setSelectedQuestio
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
   const [count, setCount] = useState(1);
-  const [timeLeft, setTimeLeft] = useState(10);
+  const [timeLeft, setTimeLeft] = useState(30);
 
   const navigate = useNavigate();
 
@@ -54,7 +54,7 @@ const QuizQuestions = ({ score, setScore, setIsQuizCompleted, setSelectedQuestio
     if (currentIndex < selectedQuestions.length - 1) {
       setCurrentIndex((prev) => prev + 1);
       setSelectedOption(null);
-      setTimeLeft(10);
+      setTimeLeft(30);
     } else {
       // Navigate to submit page when last question finishes
       setIsQuizCompleted(true)
