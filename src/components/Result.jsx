@@ -1,13 +1,16 @@
 import { IoIosArrowBack } from "react-icons/io";
 import { NavLink } from "react-router-dom";
-const Result = ({ score, selectedQuestions }) => {
+const Result = ({ score, selectedQuestions, setScore }) => {
   // console.log(selectedQuestions)
   const totalScore = selectedQuestions.length * 2;
 
   // console.log(totalScore)
 
   const status = (score / totalScore) * 100;
-  //   console.log(status);
+
+  const handleBack = () => {
+    window.location.href = "/";
+  };
 
   return (
     <section className="h-screen w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ">
@@ -42,12 +45,12 @@ const Result = ({ score, selectedQuestions }) => {
           </div>
 
           <div className=" pl-8 relative ">
-            <NavLink
-              to={"/"}
+            <button
+              onClick={handleBack}
               className=" bg-blue-500 border rounded top-10 absolute cursor-pointer p-1.5 text-white flex justify-center items-center hover:bg-blue-700"
             >
               <IoIosArrowBack /> Back
-            </NavLink>
+            </button>
           </div>
         </div>
       </div>

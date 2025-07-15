@@ -43,7 +43,7 @@ const App = () => {
           path: "/submit",
           element: (
             <ProtectedRoute isAllowed={isQuizCompleted}>
-              <Submit score={score} />
+              <Submit score={score}  />
             </ProtectedRoute>
           ),
         },
@@ -52,7 +52,7 @@ const App = () => {
           path: "/result",
           element: (
             <ProtectedRoute isAllowed={isQuizCompleted}>
-              <Result score={score} selectedQuestions={selectedQuestions} />
+              <Result score={score} selectedQuestions={selectedQuestions} setScore={setScore}/>
             </ProtectedRoute>
           ),
         },

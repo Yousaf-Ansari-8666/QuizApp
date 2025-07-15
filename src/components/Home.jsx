@@ -1,6 +1,10 @@
+import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 const Home = () => {
+  // window.location.reload()
+
+  
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-4">
       <div className="bg-white bg-opacity-90 shadow-2xl rounded-2xl p-10 max-w-lg w-full text-center">
