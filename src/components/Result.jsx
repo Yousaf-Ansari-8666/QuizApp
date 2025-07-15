@@ -14,7 +14,7 @@ const Result = ({ score, selectedQuestions, setScore }) => {
 
   return (
     <section className="h-screen w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ">
-      <div className=" flex items-center justify-center flex-col">
+      <div className=" flex items-center justify-center flex-col h-screen">
         <h1 className=" bg-green-700 text-xl sm:text-3xl p-4 w-3/4 md:w-1/2 mt-12 mb-2 text-white border rounded-xl text-center">
           Result
         </h1>
